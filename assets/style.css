@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    color: #fff;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.glassCard {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(11.3px);
+    -webkit-backdrop-filter: blur(11.3px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.alterGlassCard {
+    background: rgba(218, 112, 239, 0.144);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(11.3px);
+    -webkit-backdrop-filter: blur(11.3px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.neumorpCard {
+    background: #F3F1F5;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.logo {
+    height: 100%;
+    margin-left: 25px;
+    font-size: 1.5rem;
+}
+
+nav {
+    width: auto;
+    margin-right: 25px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+
+nav li {
+    list-style-type: none;
+    margin-left: 20px;
+    margin-top: 11px;
+    font-size: 1.2rem;
+}
+
+nav li:last-child{
+    cursor: pointer;
+}
+
+nav p {
+    background-color: #BFA2DB;
+    border-radius: 8px;
+    padding: 0px 5px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+nav a:hover {
+    font-weight: bold;
+}
+
+.jumbotron {
+    margin: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+    text-align: center;
+}
+
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 10;
+    align-self: flex-start;
+    z-index: 1;
+}
+
+main {
+    margin: 10px 30px;
+    display: flex;
+}
+
+aside {
+    flex-basis: 15%;
+}
+
+#content {
+    flex-basis: 85%;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    border-radius: 0px 16px 16px 0px;
+    border-left: 0px;
+}
+
+#profile{
+    border-radius: 16px 0px 0px 16px;
+    border-right: 0px;
+}
+
+#profile header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.25rem;
+}
+
+#profile img {
+    width: 150px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    margin-top: 7px;
+}
+
+#profile section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#profile section h3 {
+    margin-bottom: 5px;
+}
+
+#profile section div {
+    text-align: left;
+    margin: 0px 15px;
+    margin-bottom: 5px;
+}
+
+#profile section div p {
+    padding-left: 8.3px;
+}
+
+#home {
+    display: flex;
+    justify-content: space-around;
+    padding: 60px 30px 80px 30px;
+}
+
+#home div {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    margin: 30px 20px 0px 10px;
+    width: 500px;
+}
+
+#home div h1 {
+    margin: 15px 0px;
+}
+
+#home div p {
+    font-size: 1.3rem;
+}
+
+#home figure {
+    margin-top: 20px;
+}
+
+#home img {
+    width: 400px;
+}
+
+#pricing {
+    display: flex;
+    flex-direction: column;
+    background-color: #443f450e;
+    font-size: 1.5rem;
+    align-items: center;
+    text-align: center;
+    margin:0px;
+    padding: 50px 0px 20px 0px;
+}
+
+#pricing h1 {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#PriceMenu {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 10px;
+    font-size: 1.5rem;
+    color: black;
+    scale: 0.9;
+}
+
+.basic-member,
+.premium-member,
+.platinum-member {
+    width: 400px;
+    height: 475px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.4rem;
+    margin-bottom: 50px;
+}
+
+.basic-member header,
+.premium-member header,
+.platinum-member header {
+    margin: 25px 0px 15px 0px;
+}
+
+.basic-member header p,
+.premium-member header p,
+.platinum-member header p {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    color: #BFA2DB;
+    font-weight: bold;
+}
+
+.basic-member section,
+.premium-member section, 
+.platinum-member section {
+    margin-bottom: 25px;
+    color: #7F7C82;
+}
+
+.basic-member section p,
+.premium-member section p, 
+.platinum-member section p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+#about {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 90px 300px;
+    height: auto;
+    width: 100%;
+}
+
+#about h2 {
+    margin-bottom: 15px;
+}
+
+.footer {
+    padding: 50px 0px;
+    background: rgba(40, 10, 48, 0.209);
+    border-radius: 0px;
+    text-align: center;
+}
+
+@media screen and (max-width: 1530px) {
+    #pricing {
+        padding: 30px 0px 0px 0px;
+    }
+    
+    #pricing h1 {
+        width: auto;
+        margin-bottom: 0px;
+    }
+
+    #PriceMenu {
+        width: auto;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin: -50px 0px -70px 0px;
+    }
+
+    #about {
+        padding: 30px 60px;
+        height: auto;
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 1380px) {
+    #home {
+        margin: 30px 30px;
+    }
+
+    #about {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 1360px) {
+    #home {
+        margin: auto;
+        width: fit-content;
+    }
+
+    #home div {
+        width: fit-content;
+    }
+}
+
+@media screen and (max-width: 1240px) {
+    #home div {
+        width: fit-content;
+    }
+}
+
+@media screen and (max-width: 1165px) {
+    #home {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 20px 30px 40px 30px;
+    }
+
+    #home div {
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    #pricing {
+        font-size: 1.2rem;
+    }
+
+    #PriceMenu {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .logo, nav li {
+        font-size: 1rem;
+    }
+
+    nav li {
+        margin-top: 5px;
+    }
+
+    main {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    #content {
+        width: 100%;
+    }
+
+    aside {
+        margin-top: 10px;
+        width: 300px;
+        padding-bottom: 15px;
+    }
+
+    #profile, #content {
+        border-radius: 16px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #home {
+        padding: 0px 20px 30px 20px;
+    }
+}
