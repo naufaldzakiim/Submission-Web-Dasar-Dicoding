@@ -5,13 +5,13 @@ const content = document.getElementById("content");
 const credits = document.getElementById("credits");
 
 button.addEventListener("click", function(){
-    navBar.classList.toggle("glassCard");
-    profile.classList.toggle("glassCard");
-    content.classList.toggle("glassCard");
-    credits.classList.toggle("glassCard");
+    navBar.classList.toggle("glass-card");
+    profile.classList.toggle("glass-card");
+    content.classList.toggle("glass-card");
+    credits.classList.toggle("glass-card");
 
-    navBar.classList.toggle("alterGlassCard");
-    profile.classList.toggle("alterGlassCard");
-    content.classList.toggle("alterGlassCard");
-    credits.classList.toggle("alterGlassCard");
+    navBar.classList.toggle("alter-glass-card");
+    profile.classList.toggle("alter-glass-card");
+    content.classList.toggle("alter-glass-card");
+    credits.classList.toggle("alter-glass-card");
 });
