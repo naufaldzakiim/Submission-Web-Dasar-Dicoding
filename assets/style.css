@@ -7,7 +7,7 @@
 }
 
 html {
-    background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+    background-image: linear-gradient(to top, #e4bbd8 0%, #9dbef7 100%);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -16,12 +16,12 @@ html {
 
 body {
     font-family: 'Nunito', sans-serif;
-    color: #fff;
+    color: #ffffff;
     overflow: auto;
     overflow-x: hidden;
 }
 
-.glassCard {
+.alterGlassCard {
     background: rgba(255, 255, 255, 0.2);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -30,8 +30,8 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.alterGlassCard {
-    background: rgba(218, 112, 239, 0.144);
+.glassCard {
+    background: rgba(115, 96, 119, 0.144);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(11.3px);
@@ -48,13 +48,33 @@ body {
 
 .logo {
     height: 100%;
-    margin-left: 25px;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
-nav {
+.jumbotron {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 15px;
     width: auto;
-    margin-right: 25px;
+    text-align: center;
+}
+
+.sticky-top {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 10;
+    align-self: flex-start;
+    z-index: 1;
+}
+
+.sticky-bottom {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+    align-self: flex-start;
+    z-index: 1;
 }
 
 nav ul {
@@ -65,19 +85,16 @@ nav ul {
 
 nav li {
     list-style-type: none;
-    margin-left: 20px;
-    margin-top: 11px;
-    font-size: 1.2rem;
 }
 
 nav li:last-child{
     cursor: pointer;
 }
 
-nav p {
-    background-color: #BFA2DB;
+#switch {
+    background-color: #b989c5;
     border-radius: 8px;
-    padding: 0px 5px;
+    padding: 0px 10px;
 }
 
 nav a {
@@ -89,52 +106,66 @@ nav a:hover {
     font-weight: bold;
 }
 
-.jumbotron {
-    margin: 10px 30px;
-    display: flex;
-    justify-content: space-between;
-    width: auto;
-    text-align: center;
+.navLinks {
+    display: none;
 }
 
-.sticky {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 10;
-    align-self: flex-start;
-    z-index: 1;
+#navBottom {
+    padding: 0px 25px;
+    width: auto;
+    text-align: center;
+    border-radius: 0px;
+    height: 60px;
+}
+
+#navBottom ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+.navButton a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navButton img {
+    width: 25px;
+    height: 25px;
 }
 
 main {
-    margin: 10px 30px;
+    margin: 15px 10px;
     display: flex;
-}
-
-aside {
-    flex-basis: 15%;
+    flex-direction: column-reverse;
+    gap: 15px;
 }
 
 #content {
-    flex-basis: 85%;
     display: flex;
     flex-direction: column;
     width: auto;
     height: auto;
-    border-radius: 0px 16px 16px 0px;
+    border-radius: 16px;
     border-left: 0px;
 }
 
 #profile{
-    border-radius: 16px 0px 0px 16px;
-    border-right: 0px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 25px;
+    gap: 20px;
 }
 
 #profile header {
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin-top: 10px;
-    font-size: 1.25rem;
+    gap: 15px;
+    font-size: 1rem;
 }
 
 #profile img {
@@ -148,17 +179,19 @@ aside {
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin-top: 10px;
+    gap: 10px;
 }
 
 #profile section h3 {
     margin-bottom: 5px;
+    font-size: 1.5rem;
 }
 
 #profile section div {
     text-align: left;
     margin: 0px 15px;
     margin-bottom: 5px;
+    font-size: 1rem;
 }
 
 #profile section div p {
@@ -167,84 +200,91 @@ aside {
 
 #home {
     display: flex;
+    flex-direction: column-reverse;
     justify-content: space-around;
-    padding: 60px 30px 80px 30px;
+    align-items: center;
+    gap: 25px;
+    padding: 30px 0px;
 }
 
 #home div {
     display: flex;
     flex-direction: column;
-    font-size: 1.5rem;
-    margin: 30px 20px 0px 10px;
-    width: 500px;
+    text-align: center;
+    margin: 0px 30px;
+    gap: 10px;
 }
 
 #home div h1 {
-    margin: 15px 0px;
+    font-size: 1.2rem;
 }
 
 #home div p {
-    font-size: 1.3rem;
+    font-size: 0.8rem;
 }
 
 #home figure {
-    margin-top: 20px;
+    width: 60%;
 }
 
 #home img {
-    width: 400px;
+    width: 100%;
 }
 
 #pricing {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 0px;
+    gap: 30px;
     background-color: #443f450e;
-    font-size: 1.5rem;
+    font-size: 1rem;
     align-items: center;
     text-align: center;
     margin:0px;
-    padding: 50px 0px 20px 0px;
 }
 
 #pricing h1 {
     width: 100%;
-    margin-bottom: 10px;
 }
 
-#PriceMenu {
+#priceMenu {
     display: flex;
     width: 100%;
     flex-direction: row;
-    justify-content: space-evenly;
-    margin: 10px;
-    font-size: 1.5rem;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 25px;
+    font-size: 1rem;
     color: black;
-    scale: 0.9;
 }
 
 .basic-member,
 .premium-member,
 .platinum-member {
-    width: 400px;
-    height: 475px;
+    width: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 1.4rem;
-    margin-bottom: 50px;
+    font-size: 1rem;
+    gap: 15px;
+    padding: 15px 25px;
 }
 
 .basic-member header,
 .premium-member header,
 .platinum-member header {
-    margin: 25px 0px 15px 0px;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .basic-member header p,
 .premium-member header p,
 .platinum-member header p {
-    margin-top: 10px;
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: #BFA2DB;
     font-weight: bold;
 }
@@ -252,29 +292,31 @@ aside {
 .basic-member section,
 .premium-member section, 
 .platinum-member section {
-    margin-bottom: 25px;
     color: #7F7C82;
+    font-size: 1rem;
+    margin-left: 8%;
 }
 
-.basic-member section p,
-.premium-member section p, 
-.platinum-member section p {
-    margin-bottom: 10px;
+.basic-member section ul,
+.premium-member section ul, 
+.platinum-member section ul {
     font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 #about {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
     text-align: center;
-    font-size: 1.5rem;
-    padding: 90px 300px;
-    height: auto;
+    font-size: 1rem;
+    padding: 0px 20px;
+    min-height: 175px;
     width: 100%;
-}
-
-#about h2 {
-    margin-bottom: 15px;
 }
 
 .footer {
@@ -284,109 +326,146 @@ aside {
     text-align: center;
 }
 
-@media screen and (max-width: 1530px) {
-    #pricing {
-        padding: 30px 0px 0px 0px;
-    }
-    
-    #pricing h1 {
-        width: auto;
-        margin-bottom: 0px;
+@media screen and (min-width: 458px) {
+    .navLinks {
+        display: inline;
     }
 
-    #PriceMenu {
-        width: auto;
-        flex-direction: column;
-        justify-content: space-evenly;
-        margin: -50px 0px -70px 0px;
+    #navBar nav {
+        min-width: 300px;
     }
 
-    #about {
-        padding: 30px 60px;
-        height: auto;
-        width: auto;
+    #navBar nav ul {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #navBottom {
+        display: none;
+    }
+
+    #home figure {
+        width: 300px;
     }
 }
 
-@media screen and (max-width: 1380px) {
-    #home {
-        margin: 30px 30px;
-    }
-
-    #about {
-        font-size: 1.2rem;
-    }
-}
-
-@media screen and (max-width: 1360px) {
-    #home {
-        margin: auto;
-        width: fit-content;
-    }
-
-    #home div {
-        width: fit-content;
-    }
-}
-
-@media screen and (max-width: 1240px) {
-    #home div {
-        width: fit-content;
-    }
-}
-
-@media screen and (max-width: 1165px) {
-    #home {
-        flex-direction: column-reverse;
-        align-items: center;
-        padding: 20px 30px 40px 30px;
-    }
-
-    #home div {
-        text-align: center;
-        font-size: 1rem;
-    }
-
-    #pricing {
-        font-size: 1.2rem;
-    }
-
-    #PriceMenu {
-        font-size: 1rem;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .logo, nav li {
-        font-size: 1rem;
-    }
-
-    nav li {
-        margin-top: 5px;
-    }
-
+@media screen and (min-width: 762px) {
     main {
-        flex-direction: column-reverse;
-        align-items: center;
+        margin: 10px 30px;
+    }
+
+    #navBar {
+        margin: 10px 30px;
+    }
+
+    #navBar .logo {
+        font-size: 1.5rem;
+    }
+
+    #navBar nav li {
+        font-size: 1.2rem;
+    }
+
+    #profile header h1 {
+        font-size: 2rem;
+    }
+
+    #profile section h3 {
+        margin-bottom: 5px;
+        font-size: 1.8rem;
+    }
+
+    #profile section div {
+        font-size: 1.2rem;
+    }
+
+    #home div h1 {
+        font-size: 2rem;
+    }
+
+    #home div p {
+        font-size: 1.2rem;
+    }
+
+    #pricing h1 {
+        font-size: 2rem;
+    }
+
+    #priceMenu {
+        gap: 50px;
+    }
+
+    .basic-member,
+    .premium-member,
+    .platinum-member {
+        width: 330px;
+    }
+
+    .basic-member header h2,
+    .premium-member header h2,
+    .platinum-member header h2{
+        font-size: 1.8rem;
+    }
+
+    .basic-member header p,
+    .premium-member header p,
+    .platinum-member header p{
+        font-size: 1.3rem;
+    }
+
+    .basic-member section ul li,
+    .premium-member section ul li,
+    .platinum-member section ul li{
+        font-size: 1.15rem;
+    }
+
+    #about h2 {
+        font-size: 2rem;
+    }
+
+    #about p {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    main {
+        flex-direction: row;
+        gap: 0px;
     }
 
     #content {
         width: 100%;
+        border-radius: 0px 16px 16px 0px;
     }
 
-    aside {
-        margin-top: 10px;
-        width: 300px;
-        padding-bottom: 15px;
+    #profile {
+        border-radius: 16px 0px 0px 16px;
+        width: 100%;
+        max-width: 350px;
     }
 
-    #profile, #content {
-        border-radius: 16px;
+    #home div {
+        text-align: left;
     }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (min-width: 1200px){
     #home {
-        padding: 0px 20px 30px 20px;
+        flex-direction: row;
+        padding: 30px 35px;
+    }
+
+    #home div {
+        width: 40%;
+        margin: 0px;
+    }
+
+    #home figure {
+        width: 450px;
+    }
+
+    #about {
+        padding: 0px 50px;
     }
 }

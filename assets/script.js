@@ -1,10 +1,10 @@
-const Switch = document.getElementById("Switch");
+const button = document.getElementById("switch");
 const navBar = document.getElementById("navBar");
 const profile = document.getElementById("profile");
 const content = document.getElementById("content");
 const credits = document.getElementById("credits");
 
-Switch.addEventListener("click", function(){
+button.addEventListener("click", function(){
     navBar.classList.toggle("glassCard");
     profile.classList.toggle("glassCard");
     content.classList.toggle("glassCard");
